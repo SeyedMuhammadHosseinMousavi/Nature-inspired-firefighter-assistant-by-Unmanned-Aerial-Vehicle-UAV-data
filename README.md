@@ -6,6 +6,74 @@
 ### Please cite:
 - Mousavi, S., and A. Ilanloo. "Nature inspired firefighter assistant by unmanned aerial vehicle (UAV) data." Journal of Future Sustainability 3.3 (2023): 143-166.
 
+
+
+## Overview
+
+Wildfires are a significant threat to forests, wildlife, and human safety. This research leverages **Unmanned Aerial Vehicles (UAVs)** equipped with color, thermal, and infrared cameras, along with nature-inspired algorithms, to detect and analyze wildfires efficiently.
+
+### Highlights:
+- **Fire Detection**: Uses image segmentation and classification on color and thermal datasets.
+- **Smoke Analysis**: Proposes a workflow for smoke detection using multi-color space techniques.
+- **Nature-Inspired Algorithms**: Implements Chicken Swarm Algorithm (CSA), Bees Algorithm (BA), and Biogeography-Based Optimization (BBO) for enhanced accuracy.
+
+---
+
+## Features
+
+### 1. **Fire Segmentation**
+- **Techniques Used**:
+  - **CSA Intensity Adjustment**: Enhances image contrast.
+  - **DnCNN Denoising**: Removes unwanted noise for clearer segmentation.
+  - **Bees Algorithm**: Performs robust and fast image segmentation.
+- **Performance Metrics**:
+  - FLAME Dataset: **Precision**: 95.57%
+  - DeepFire Dataset: **Precision**: 91.74%
+
+### 2. **Fire Classification**
+- **Process**:
+  - Uses Local Phase Quantization (LPQ) for frequency-based feature extraction.
+  - Selects features via Biogeography-Based Optimization (BBO).
+  - Classifies fire/no-fire images using Artificial Neural Networks (ANN) optimized with Firefly Algorithm (FA).
+- **Performance Metrics**:
+  - FLAME Dataset: **Accuracy**: 91.33%
+  - DeepFire Dataset: **Accuracy**: 96.88%
+
+### 3. **Smoke Detection**
+- Separates and enhances RGB channels using Histogram Equalization and Median Filtering.
+- Converts images into HSV, Lab, and YCbCr color spaces for multi-channel analysis.
+- Identifies smoke using morphology operations on combined channels.
+
+---
+
+## Methodology
+
+### Datasets
+- **FLAME (2021)**: Includes color and thermal images of wildfires.
+- **DeepFire (2022)**: Latest dataset for UAV-based fire detection.
+
+### Algorithms
+- **Chicken Swarm Algorithm (CSA)**:
+  - Improves image contrast in dense environments.
+- **Bees Algorithm (BA)**:
+  - Combines global and local searches for precise segmentation.
+- **DnCNN**:
+  - Denoises images using a deep convolutional neural network.
+- **Firefly Algorithm (FA)**:
+  - Optimizes ANN for better classification accuracy.
+- **Biogeography-Based Optimization (BBO)**:
+  - Selects impactful features for classification.
+
+---
+
+## Results
+
+| Metric          | FLAME (Color) | DeepFire (Thermal) |
+|------------------|---------------|--------------------|
+| Segmentation Precision | 95.57%        | 91.74%             |
+| Classification Accuracy | 91.33%        | 96.88%             |
+
+
 ![bbo fa](https://github.com/user-attachments/assets/dddabdb8-30b7-4db1-8658-ccdf38e90417)
 ![class](https://github.com/user-attachments/assets/8e7b21c9-f6c9-4ef8-9137-7e119018bc4c)
 ![classification (2)](https://github.com/user-attachments/assets/1838fc02-8071-4b4f-92dc-0df7c7c3d7a4)
